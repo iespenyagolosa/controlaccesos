@@ -2,19 +2,20 @@
 Ficheros del proyecto del control de accesos del IES Penyagolosa
 
 ## Pasos para acceder por SSH:
-1. Instalación
+### 1. Instalación
 En Lliurex la instalación se resume a:
 ```
 sudo apt-get install git
 ```
-2. Uso de GIT
+### 2. Uso de GIT
 Lo primero que necesitamos para poder usar GIT de manera distribuida, es contar con un repositorio, en el cual vamos a mantener nuestros archivos versionados.
-Por lo general existen 3 casos de uso básicos:
-• Caso 1: crear un repositorio: Vamos a comenzar un proyecto el cual todavía no tiene su primera línea de código o ningún otro tipo de archivo.
-• Caso 2: clonar un repositorio: Tenemos un repositorio creado en el servidor (Github, Bitbucket, etc) pero no lo tenemos en nuestra máquina local, por lo que tenemos que descargar el proyecto para continuarlo localmente.
-• Caso 3: agregar un remoto: En el cual ya tenemos un serie de archivos locales los cuales queremos subir a un repositorio nuevo en el servidor.
 
-3. Métodos de conexión
+Por lo general existen 3 casos de uso básicos:
+* Caso 1: crear un repositorio: Vamos a comenzar un proyecto el cual todavía no tiene su primera línea de código o ningún otro tipo de archivo.
+* Caso 2: clonar un repositorio: Tenemos un repositorio creado en el servidor (Github, Bitbucket, etc) pero no lo tenemos en nuestra máquina local, por lo que tenemos que descargar el proyecto para continuarlo localmente.
+* Caso 3: agregar un remoto: En el cual ya tenemos un serie de archivos locales los cuales queremos subir a un repositorio nuevo en el servidor.
+
+### 3. Métodos de conexión
 La mayoría de los servidores de control de versiones con GIT permiten la conexión de dos maneras: Por medio de claves SSH y por medio de HTTPS
 La más sencilla de las dos es el uso de HTTPS, aunque no siempre será la más cómoda de usar, sobre todo por la solicitud de clave de usuario al servicio. Pero es la más ventajosa en caso que estéis trabajando en una computadora de la cual no sois
 propietarios.
