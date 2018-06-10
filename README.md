@@ -1,11 +1,12 @@
-# controlaccesos
-Ficheros del proyecto del control de accesos
+# control de Accesos
+Ficheros del proyecto del control de accesos del IES Penyagolosa
 
-# Pasos para acceder por SSH:
+## Pasos para acceder por SSH:
 1. Instalación
 En Lliurex la instalación se resume a:
+```
 sudo apt-get install git
-
+```
 2. Uso de GIT
 Lo primero que necesitamos para poder usar GIT de manera distribuida, es contar con un repositorio, en el cual vamos a mantener nuestros archivos versionados.
 Por lo general existen 3 casos de uso básicos:
