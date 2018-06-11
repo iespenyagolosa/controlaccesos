@@ -53,8 +53,7 @@ $ eval "$(ssh-agent -s)"
 $ ssh-add ~/.ssh/id_rsa
 ```
 
-3. Añade la clave SSH para la cuenta de github
-Copia la clave SSH en el portapapeles.
+3. Añade la clave SSH para la cuenta de github. Copia la clave SSH en el portapapeles.
 
 ```
 $ sudo apt-get install xclip
@@ -63,19 +62,19 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 
 4. Ahora inicia sesión en tu [cuenta de github](https://www.github.com) o créate una si aún no la tienes. *Recuerda usar el mismo e-mail que has utilizado antes.*
 
-  4.1. En la esquina superior derecha de cualquier página, haz clic en tu foto de perfil, a continuación, haz clic en **Settings**.
+* 1. En la esquina superior derecha de cualquier página, haz clic en tu foto de perfil, a continuación, haz clic en **Settings**.
 
-  4.2. En la barra lateral configuración de usuario, haz clic en las **claves SSH y GPG**.
+* 2. En la barra lateral configuración de usuario, haz clic en las **claves SSH y GPG**.
 
-  4.3. Haz clic en la tecla **New SSH key** o Añadir clave SSH.
+* 3. Haz clic en la tecla **New SSH key** o Añadir clave SSH.
 
-  4.4. En el campo "Título", añade una etiqueta descriptiva para la nueva clave. Por ejemplo, “Ordenador de clase”.
+* 4. En el campo "Título", añade una etiqueta descriptiva para la nueva clave. Por ejemplo, “Ordenador de clase”.
 
-  4.5. Pegar la clave en el campo "Clave".
+* 5. Pegar la clave en el campo "Clave".
 
-  4.6. Haz clic en **Agregar clave SSH**.
+* 6. Haz clic en **Agregar clave SSH**.
 
-  4.7. Si te lo solicita, confirma tu contraseña de GitHub.
+* 7. Si te lo solicita, confirma tu contraseña de GitHub.
 
 ### 4. Clonar el repositorio de nuestro proyecto.
 
@@ -91,20 +90,31 @@ cd ~/
 mkdir proyectos_git
 cd proyectos_git
 ```
-3. Ahora clonamos el repositorio remoto.
+3. A continuación clonamos el repositorio remoto.
 ```
 git clone git@github.com:iespenyagolosa/controlaccesos.git
 ```
+
+## Flujo de trabajo
+Tu repositorio local esta compuesto por tres "árboles" administrados por git. El primero es tu **Directorio de trabajo** que contiene los archivos, el segundo es el **Index** que actua como una zona intermedia, y el último es el **HEAD** que apunta al último commit realizado.
+
+![Arboles del repositorio local](img/trees.png)
+
 4. Ahora podemos modificar cualquiera de los archivos del proyecto. Una vez modificado uno o varios archivos, este archivo debe pasar por la fase de Estate, es decir, marcarlo para el próximo commit
 ```
 git add ficheroModificado.xxx
 ```
-Tu repositorio local esta compuesto por tres "árboles" administrados por git. El primero es tu **Directorio de trabajo** que contiene los archivos, el segundo es el **Index** que actua como una zona intermedia, y el último es el **HEAD** que apunta al último commit realizado.
-![Arboles del repositorio local](img/trees.png)
+o también podemos añadir todos los archivos y subcarpetas:
+```
+git add .
+```
+
 6. Hacemos el commit: guardamos los cambios en la línea de tiempo del proyecto
 ```
 git commit -m 'Comentario acerca de los cambios realizados'
 ```
+Actualmente el archivo esta incluído en el HEAD, pero aún no en tu repositorio remoto.
+
 7. Ahora necesitamos subir los cambios al repositorio remoto.
 ```
 git push origin master
