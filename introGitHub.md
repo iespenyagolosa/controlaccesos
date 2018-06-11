@@ -62,19 +62,19 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 
 4. Ahora inicia sesión en tu [cuenta de github](https://www.github.com) o créate una si aún no la tienes. *Recuerda usar el mismo e-mail que has utilizado antes.*
 
-* 1. En la esquina superior derecha de cualquier página, haz clic en tu foto de perfil, a continuación, haz clic en **Settings**.
+1. En la esquina superior derecha de cualquier página, haz clic en tu foto de perfil, a continuación, haz clic en **Settings**.
 
-* 2. En la barra lateral configuración de usuario, haz clic en las **claves SSH y GPG**.
+2. En la barra lateral configuración de usuario, haz clic en las **claves SSH y GPG**.
 
-* 3. Haz clic en la tecla **New SSH key** o Añadir clave SSH.
+3. Haz clic en la tecla **New SSH key** o Añadir clave SSH.
 
-* 4. En el campo "Título", añade una etiqueta descriptiva para la nueva clave. Por ejemplo, “Ordenador de clase”.
+4. En el campo "Título", añade una etiqueta descriptiva para la nueva clave. Por ejemplo, “Ordenador de clase”.
 
-* 5. Pegar la clave en el campo "Clave".
+5. Pegar la clave en el campo "Clave".
 
-* 6. Haz clic en **Agregar clave SSH**.
+6. Haz clic en **Agregar clave SSH**.
 
-* 7. Si te lo solicita, confirma tu contraseña de GitHub.
+7. Si te lo solicita, confirma tu contraseña de GitHub.
 
 ### 4. Clonar el repositorio de nuestro proyecto.
 
@@ -82,17 +82,17 @@ Vamos a los comandos de consola:
 
 1. Primero vamos a asegurarnos de estar en la carpeta Home del Usuario.
 ```
-cd ~/
+$ cd ~/
 ```
 
 2. Creamos una carpeta de proyectos donde vamos a agregar todos nuestros proyectos con GIT (este paso no es obligatorio).
 ```
-mkdir proyectos_git
-cd proyectos_git
+$ mkdir proyectos_git
+$ cd proyectos_git
 ```
 3. A continuación clonamos el repositorio remoto.
 ```
-git clone git@github.com:iespenyagolosa/controlaccesos.git
+$ git clone git@github.com:iespenyagolosa/controlaccesos.git
 ```
 
 ## Flujo de trabajo
@@ -102,26 +102,26 @@ Tu repositorio local esta compuesto por tres "árboles" administrados por git. E
 
 4. Ahora podemos modificar cualquiera de los archivos del proyecto. Una vez modificado uno o varios archivos, este archivo debe pasar por la fase de Estate, es decir, marcarlo para el próximo commit
 ```
-git add ficheroModificado.xxx
+$ git add ficheroModificado.xxx
 ```
 o también podemos añadir todos los archivos y subcarpetas:
 ```
-git add .
+$ git add .
 ```
 
 6. Hacemos el commit: guardamos los cambios en la línea de tiempo del proyecto
 ```
-git commit -m 'Comentario acerca de los cambios realizados'
+$ git commit -m 'Comentario acerca de los cambios realizados'
 ```
 Actualmente el archivo esta incluído en el HEAD, pero aún no en tu repositorio remoto.
 
 7. Ahora necesitamos subir los cambios al repositorio remoto.
 ```
-git push origin master
+$ git push origin master
 ```
 8. En caso de que otra persona suba un cambio al servidor, y debamos descargarlo a nuestro equipo local, usaremos el comando pull.
 ```
-git pull origin master
+$ git pull origin master
 ```
 
 ### 5. El trabajo colaborativo
