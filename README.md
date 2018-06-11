@@ -58,14 +58,21 @@ $ xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
 4. Ahora inicia sesión en tu [cuenta de github](https://www.github.com) o créate una si aún no la tienes. Recuerda usar el mismo e-mail que has utilizado antes. 
-  4.1. En la esquina superior derecha de cualquier página, haz clic en tu foto de perfil, a continuación, haz clic en *Settings*.
-  4.2. En la barra lateral configuración de usuario, haz clic en las claves SSH y GPG.
-  4.3. Haz clic en la tecla New SSH o Añadir clave SSH.
-  4.4. En el campo "Título", añade una etiqueta descriptiva para la nueva clave. Por ejemplo, “Ordenador de clase”.
-  4.5. Pegar la clave en el campo "Clave".
-  4.6. Haz clic en Agregar clave SSH.
-  4.7. Si te lo solicita, confirma tu contraseña de GitHub.
 
+  4.1. En la esquina superior derecha de cualquier página, haz clic en tu foto de perfil, a continuación, haz clic en *Settings*.
+  
+  4.2. En la barra lateral configuración de usuario, haz clic en las claves SSH y GPG.
+  
+  4.3. Haz clic en la tecla New SSH o Añadir clave SSH.
+  
+  4.4. En el campo "Título", añade una etiqueta descriptiva para la nueva clave. Por ejemplo, “Ordenador de clase”.
+  
+  4.5. Pegar la clave en el campo "Clave".
+  
+  4.6. Haz clic en Agregar clave SSH.
+  
+  4.7. Si te lo solicita, confirma tu contraseña de GitHub.
+  
 ### 4. Crear un proyecto nuevo
 La creación de un proyecto tiene varias maneras de realizarse, posiblemente la más sencilla sea crear un nuevo repositorio en el servidor, para luego subir nuestro primer documento al servidor.
 
