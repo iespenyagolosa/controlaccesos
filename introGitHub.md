@@ -30,7 +30,7 @@ El **uso de las claves SSH** es la manera más segura y estable de usar GIT. El 
 
 2. Pega el siguiente texto a continuación, sustituyendo en la dirección de correo electrónico por la tuya.
 ```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096 -C "usuario@iespenyagolosa.es"
 ```
 Esto crea una nueva clave SSH, utilizando el correo electrónico proporcionado como una etiqueta.
 
