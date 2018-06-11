@@ -11,7 +11,7 @@ sudo apt-get install git
 Lo primero que necesitamos para poder usar GIT de manera distribuida, es contar con un repositorio, en el cual vamos a mantener nuestros archivos versionados.
 
 Por lo general existen 3 casos de uso básicos:
-* Caso 1: crear un repositorio: Vamos a comenzar un proyecto el cual todavía no tiene su primera línea de código o ningún otro tipo de archivo.
+* *Caso 1:* crear un repositorio: Vamos a comenzar un proyecto el cual todavía no tiene su primera línea de código o ningún otro tipo de archivo.
 * Caso 2: clonar un repositorio: Tenemos un repositorio creado en el servidor (Github, Bitbucket, etc) pero no lo tenemos en nuestra máquina local, por lo que tenemos que descargar el proyecto para continuarlo localmente.
 * Caso 3: agregar un remoto: En el cual ya tenemos un serie de archivos locales los cuales queremos subir a un repositorio nuevo en el servidor.
 
