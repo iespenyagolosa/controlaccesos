@@ -5,7 +5,7 @@ Ficheros del proyecto del control de accesos del IES Penyagolosa
 ### 1. Instalación
 En Lliurex la instalación se resume a:
 ```
-sudo apt-get install git
+$ sudo apt-get install git
 ```
 ### 2. Uso de GIT
 Lo primero que necesitamos para poder usar GIT de manera distribuida, es contar con un repositorio, en el cual vamos a mantener nuestros archivos versionados.
@@ -30,7 +30,7 @@ El **uso de las claves SSH** es la manera más segura y estable de usar GIT. El 
 
 2. Pega el siguiente texto a continuación, sustituyendo en la dirección de correo electrónico por la tuya.
 ```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 Esto crea una nueva clave SSH, utilizando el correo electrónico proporcionado como una etiqueta.
 
@@ -43,11 +43,11 @@ Introduce un archivo en el que guardar la clave (/home/usuario/.ssh/id_rsa): [Pu
 
 1. Inicia el ssh-agent en el background.
 
-```eval "$(ssh-agent -s)"```
+```$ eval "$(ssh-agent -s)"```
 
 2. Añade tu clave privada SSH a ssh-agent.
 
-```ssh-add ~/.ssh/id_rsa```
+```$ ssh-add ~/.ssh/id_rsa```
 
 3. Añade la clave SSH para la cuenta de github
 Copia la clave SSH en el portapapeles.
@@ -80,39 +80,38 @@ La creación de un proyecto tiene varias maneras de realizarse, posiblemente la 
 Vamos a los comandos de consola:
 
 1. Primero vamos a asegurarnos de estar en la carpeta Home del Usuario.
-```cd ~/```
+
+```$ cd ~/```
 
 2. Creamos una carpeta de proyectos donde vamos a agregar todos nuestros proyectos con GIT (este paso no es obligatorio).
-```
-mkdir proyectos_git
-cd proyectos_git
-```
-3. Luego creamos la carpeta del repositorio.
-```
-mkdir mi_primer_repo
-cd mi_primer_repo
-```
-4. Ya dentro de la carpeta del proyecto, debemos inicializar nuestro control de versiones.
-```git init```
 
-5. creamos un archivo para subir al server, por ahora un archivo vacío
-```touch README.md```
-este nuevo archivo debe pasar por la fase de Estate, es decir, marcarlo para el próximo commit
-```git add README.md```
+```
+$ mkdir proyectos_git
+$ cd proyectos_git
+```
+3. Ya dentro de la carpeta del proyecto, debemos inicializar nuestro control de versiones.
+
+```$ git init```
+
+4. Luego clonamos el repositorio remoto por SSH.
+
+```
+$ git clone git@github.com:iespenyagolosa/controlaccesos.git
+$ cd controlaccesos
+```
+
+5. Podemos hacer cambios en uno o varios ficheros del proyecto. Estos archivos deben pasar por la fase de Estate, es decir, marcarlos para el próximo commit
+
+```$ git add ficheroModificado.xxx```
 
 6. Hacemos el commit: guardamos nuestro primer punto en la línea de tiempo del proyecto
-```git commit -m 'Este es el mensaje de nuestro primer commit'```
 
-Con estos tres pasos, ya tenemos en nuestro repositorio marcado los primeros cambios en la línea de vida del proyecto. Ahora necesitamos agregar el servidor al cual va a subir el archivo y realizar nuestro primer push.
+```$ git commit -m 'Este es el mensaje de nuestro commit'```
 
-Para eso necesitaremos el URL http del repositorio en nuestro servidor de GIT. git add remote origin https://github.com/highercomve/zczcads.git
-
-En este comando, es importante mencionar, que el comando git add remote está tomando 2 parámetros, que son: el nombre del servidor remoto (origin) y la URL del repositorio (https://github.com/highercomve/zczcads.git).
-
-Por ahora, vamos a proceder a subir nuestro código al servidor, para ello debemos hacer un push.
+7. Ahora ya vamos a proceder a actualizar nuestro código al servidor, para ello debemos hacer un push.
 ```git push origin master```
 
-Con esto, hemos iniciado nuestro primer repositorio y ya comenzamos a subir los cambios al servidor. En caso de que otra persona suba un cambio al server, y debamos descargarlo a nuestro equipo local, usaremos el comando pull.
+En caso de que otra persona suba un cambio al servidor, y debamos descargarlo a nuestro equipo local, usaremos el comando pull.
 ```
 git pull origin master
 ```
