@@ -99,7 +99,8 @@ git clone git@github.com:iespenyagolosa/controlaccesos.git
 ```
 git add ficheroModificado.xxx
 ```
-
+Tu repositorio local esta compuesto por tres "árboles" administrados por git. El primero es tu **Directorio de trabajo** que contiene los archivos, el segundo es el **Index** que actua como una zona intermedia, y el último es el **HEAD** que apunta al último commit realizado.
+![Arboles del repositorio local](img/trees.png)
 6. Hacemos el commit: guardamos los cambios en la línea de tiempo del proyecto
 ```
 git commit -m 'Comentario acerca de los cambios realizados'
